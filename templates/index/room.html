@@ -1,4 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
 <h1>Welcome To Room</h1>
-{% endblock %}
+{% for room in rooms %}
+<tr>
+  <li>{{room.name}}</li>
+  <li>{{room.description}}</li>
+  <li>{{room.created}}</li>
+</tr>
+{% endfor %} {% endblock %}
