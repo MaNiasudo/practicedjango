@@ -6,8 +6,10 @@
     <title>Base</title>
   </head>
   <body>
-    <a href="#">Welcome Home</a>
+    <a href="{% url 'home' %}">Welcome Home</a>
     <hr />
     {% block content %} {% endblock%}
+
+    <p>@CopyRight To TahaEfazati</p>
   </body>
 </html>

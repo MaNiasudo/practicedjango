@@ -3,4 +3,19 @@
 <li>{{room.name}}</li>
 <li>{{room.description}}</li>
 <li>{{room.created}}</li>
+<div>
+  <br />
+  <hr />
+  {% for message in messages %}
+  <div>
+    <td>
+      <li>{{message.user}}</li>
+      <li>{{message.body}}</li>
+      <li>{{message.created}}</li>
+    </td>
+  </div>
+  <hr />
+
+  {% endfor %}
+</div>
 {% endblock %}

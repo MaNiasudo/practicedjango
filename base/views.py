@@ -9,7 +9,10 @@ def home(request):
 
 def room(request,pk):
     room = Room.objects.get(id=pk)
-    message = Message.objects.filter()
-    context = {'room':room}
+    messages = Message.objects.filter(room=room).order_by('updated')
+    context = {
+        'room':room , 
+        'messages':messages
+        }
     return render(request , 'index/room.html' , context)
 
